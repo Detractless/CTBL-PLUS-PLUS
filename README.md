@@ -20,4 +20,5 @@ People who feel like Cold Turkey's current options aren't quite enough. If you'v
 
 CTBL++ is in active development and looking for collaborators - coders, vibe coders, and people with ideas are all welcome. Even if you can't write code, feature requests and feedback are genuinely useful. Open an issue or start a discussion.
 
+##
 *CTBL++ is an independent community project and is not affiliated with or endorsed by the Cold Turkey developer.*
