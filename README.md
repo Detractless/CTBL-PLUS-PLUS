@@ -6,7 +6,7 @@ Cold Turkey is one of the best blocking tools out there, but there are features 
 
 ## What's built so far
 
-**Queued Delay** - every unblock request, exception, or setting change gets held in a signed queue for a mandatory cooldown period before it executes. You can't cancel it, backdate it, or impulse-click your way around it. The delay is enforced at the service level, not the UI level.
+**Queued Delay** - Cold Turkey normally requires a block to be off to make any change, which is its most vulnerable moment and the easiest point to relapse. The queued delay lock type provides an alternitave, instead of unlocking to make a change, you queue the change and it executes after a delay you chose in advance. There's nothing to re-lock and no instant access for an impulse to act on.
 
 ## What's coming
 
