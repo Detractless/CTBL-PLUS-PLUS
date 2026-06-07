@@ -1,0 +1,19 @@
+.portlet {
+    margin-bottom: 50px;
+}
+
+.portlet-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--text-main);
+    font-size: 33px;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+}
+
+.ds-card {
+    margin-bottom: 50px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}

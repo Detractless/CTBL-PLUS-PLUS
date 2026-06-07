@@ -1,0 +1,31 @@
+/* Settings */
+@import 'settings/_variables.css';
+
+/* Base */
+@import 'base/_reset.css';
+@import 'base/_typography.css';
+@import 'base/_scrollbars.css';
+
+/* Layout */
+@import 'layout/_shell.css';
+@import 'layout/_sidebar.css';
+@import 'layout/_page.css';
+
+/* Components */
+@import 'components/_cards.css';
+@import 'components/_buttons.css';
+@import 'components/_forms.css';
+@import 'components/_tables.css';
+@import 'components/_badges.css';
+@import 'components/_toast.css';
+@import 'components/_overlays.css';
+@import 'components/_dropdown-filter.css';
+
+/* Specific */
+@import 'specific/_queue-tab.css';
+@import 'specific/_app-control-tab.css';
+@import 'specific/_templates-tab.css';
+
+
+/* Utilities */
+@import 'utilities/_helpers.css';

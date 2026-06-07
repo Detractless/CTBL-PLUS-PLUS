@@ -1,0 +1,13 @@
+#unsupported-block-msg { display: none; padding: 15px; background-color: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--color-danger); border-radius: 5px; margin-bottom: 15px; }
+.warning-title { color: var(--color-danger); font-weight: bold; font-size: 14px; margin-bottom: 4px; }
+.warning-text { color: var(--text-muted); font-size: 14px; line-height: 1.4; }
+
+#detail-add-exception { display: none; }
+#target-url-preview { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; display: none; }
+
+#detail-remove-exception { display: none; }
+
+/* Legacy / Clean up targets */
+#detail-target-url-lines { padding: 0; overflow-y: hidden; }
+#detail-remove-url-lines { padding: 0; overflow-y: hidden; }
+.numbered-textarea-container { height: 150px; }

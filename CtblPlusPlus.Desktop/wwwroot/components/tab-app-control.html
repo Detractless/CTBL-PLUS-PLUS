@@ -1,0 +1,132 @@
+<div id="tab-app-control" class="tab-panel">
+    <div class="page-title-bar">
+        <span class="page-title-tab active">App Control</span>
+        <div class="header-controls">
+            <button type="button" id="app-control-toggle-switch" class="app-control-toggle-btn">OFF</button>
+        </div>
+    </div>
+    <div class="page-body">
+
+        <!-- Request Access Form -->
+        <div class="portlet">
+            <div class="portlet-title">Whitelist Application</div>
+            <div class="ds-field">
+                <label>Application Path</label>
+                <div class="app-path-input-group">
+                    <div class="flex-1">
+                        <input type="text" id="app-control-app-path" class="ds-input" placeholder="Select or paste an application path..." />
+                    </div>
+                    <button type="button" id="app-control-browse-btn" class="btn btn-secondary">Browse...</button>
+                </div>
+            </div>
+
+            <!-- App Identity Preview (shown after file selection) -->
+            <div id="app-control-app-preview">
+                <div class="app-preview-header">
+                    <div class="flex-1">
+                        <div id="app-control-app-name"></div>
+                        <div id="app-control-app-publisher"></div>
+                    </div>
+                    <div id="app-control-app-badge"></div>
+                </div>
+            </div>
+
+            <button type="button" id="app-control-queue-btn" class="btn btn-primary">Request App Access</button>
+            <div id="app-control-toast" class="settings-toast"></div>
+        </div>
+
+        <!-- Applications Table -->
+        <div class="portlet">
+            <div class="portlet-title">
+                <span>Applications</span>
+                <div class="portlet-search-group">
+                    <div class="portlet-search">
+                        <input type="text" id="app-search" class="ds-input ds-input-sm" placeholder="Search applications..." />
+                    </div>
+                    
+                    <div class="dropdown-wrapper">
+                        <button type="button" class="dropdown-trigger" id="dd-trigger" title="Filter" aria-label="Filter options">
+                            <span class="icon" id="dd-icon">
+                                <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                            </span>
+                            <span class="filter-badge"></span>
+                        </button>
+
+                        <div class="dropdown-menu" id="dd-menu">
+                            <div class="filter-summary" id="filter-summary">
+                                <span class="filter-summary-tag" id="summary-status" style="display: none;">
+                                    <span class="tag-label">Status:</span>
+                                    <span class="tag-value" id="summary-status-value"></span>
+                                </span>
+                                <span class="filter-summary-tag" id="summary-field" style="display: none;">
+                                    <span class="tag-label">Field:</span>
+                                    <span class="tag-value" id="summary-field-value"></span>
+                                </span>
+                            </div>
+
+                            <div class="dropdown-slider" id="dd-slider">
+                                <div class="dropdown-view">
+                                    <button class="dropdown-item active" id="dd-all-apps">All Applications</button>
+                                    <button class="dropdown-item dd-show-submenu" data-target="status" data-title="Status" id="dd-show-status">
+                                        <span>Status</span>
+                                        <span class="chevron-right"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+                                    </button>
+                                    <button class="dropdown-item dd-show-submenu" data-target="field" data-title="Field" id="dd-show-field">
+                                        <span>Field</span>
+                                        <span class="chevron-right"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+                                    </button>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="dropdown-item" id="dd-clear-filters" style="color: var(--color-danger);">Clear Filters</button>
+                                </div>
+
+                                <div class="dropdown-view">
+                                    <div class="submenu-header">
+                                        <button class="submenu-back" id="dd-hide-submenu">
+                                            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg> Back
+                                        </button>
+                                        <span class="submenu-title" id="submenu-title-text">Status</span>
+                                    </div>
+                                    
+                                    <div class="submenu-content-block" id="submenu-status" style="display: none;">
+                                        <button class="dropdown-item filter-group-status submenu-item" data-parent="dd-show-status">Allowed</button>
+                                        <button class="dropdown-item filter-group-status submenu-item" data-parent="dd-show-status">Blocked</button>
+                                        <button class="dropdown-item filter-group-status submenu-item" data-parent="dd-show-status">Detected</button>
+                                    </div>
+
+                                    <div class="submenu-content-block" id="submenu-field" style="display: none;">
+                                        <button class="dropdown-item filter-group-field submenu-item" data-parent="dd-show-field">Name</button>
+                                        <button class="dropdown-item filter-group-field submenu-item" data-parent="dd-show-field">Publisher</button>
+                                        <button class="dropdown-item filter-group-field submenu-item" data-parent="dd-show-field">Path</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="bulk-action-bar" class="bulk-action-bar" style="display: none;">
+                <span id="bulk-selection-count">0 items selected</span>
+                <div class="bulk-actions">
+                    <button type="button" id="bulk-allow-btn" class="btn btn-sm btn-primary">Bulk Allow</button>
+                    <button type="button" id="bulk-revoke-btn" class="btn btn-sm btn-danger">Bulk Revoke</button>
+                </div>
+            </div>
+            <table id="app-control-rules-table">
+                <thead>
+                    <tr>
+                        <th class="col-check"><input type="checkbox" id="app-select-all" /></th>
+                        <th>Application</th>
+                        <th class="col-publisher">Publisher</th>
+                        <th class="col-status">Status</th>
+                        <th class="col-signature">Revoke</th>
+                    </tr>
+                </thead>
+                <tbody id="app-control-rules-body">
+                    <tr><td colspan="5" class="empty-table-state">Scanning for applications...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

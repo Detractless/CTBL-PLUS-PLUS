@@ -1,0 +1,66 @@
+<div id="tab-queue" class="tab-panel active">
+    <div class="page-title-bar">
+        <span class="page-title-tab active">Queue</span>
+    </div>
+    <div class="page-body">
+
+        <div class="portlet">
+            <div class="portlet-title">Queue Action</div>
+            <form id="action-form">
+                <div class="ds-field">
+                    <label for="action-block">1. Select Target Block</label>
+                    <select id="action-block" class="ds-input" required>
+                        <option value="">Loading blocks...</option>
+                    </select>
+                </div>
+
+                <div id="unsupported-block-msg">
+                    <div class="warning-title">Unsupported Block Type</div>
+                    <div class="warning-text">
+                        Modifying Frozen Turkey blocks is not supported by this application.
+                    </div>
+                </div>
+
+                <div class="ds-field" id="action-type-group">
+                    <label for="action-type">2. Select Action</label>
+                    <select id="action-type" class="ds-input" required>
+                        <option value="">-- Choose Action --</option>
+                        <option value="add_exception">Add Website Exception</option>
+                        <option value="remove_exception">Remove Website</option>
+                    </select>
+                </div>
+
+                <div class="ds-field action-detail" id="detail-add-exception">
+                    <label for="detail-add-list">3. Target Websites to Allow (one per line)</label>
+                    <textarea id="detail-add-list" class="form-control ds-input" rows="10" placeholder="example.com&#10;youtube.com&#10;reddit.com/r/all"></textarea>
+                    <div id="target-url-preview" class="sanitized-preview"></div>
+                </div>
+
+                <div class="ds-field action-detail" id="detail-remove-exception">
+                    <label for="detail-remove-list">3. Select Websites to Remove (Ctrl/Shift+Click to highlight multiple)</label>
+                    <select id="detail-remove-list" class="form-control ds-input" multiple size="10"></select>
+                </div>
+
+                <button type="submit" id="submit-action-btn" class="btn btn-primary">Queue Action</button>
+            </form>
+        </div>
+
+        <div class="portlet">
+            <div class="portlet-title">Active Queue</div>
+            <table id="queue-table">
+                <thead>
+                    <tr>
+                        <th>Target</th>
+                        <th class="col-block">Block</th>
+                        <th class="col-unlock-time">Unlock Time</th>
+                        <th class="col-action">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="queue-body">
+                    <tr><td colspan="4" class="empty-table-state">Loading queue...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
