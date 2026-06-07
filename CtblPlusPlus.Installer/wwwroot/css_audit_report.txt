@@ -1,0 +1,14 @@
+================================================== 
+CSS AUDIT REPORT FOR: index.html 
+================================================== 
+ 
+--- INTERNAL STYLE BLOCKS --- 
+7:    <style>
+ 
+--- INLINE CSS ATTRIBUTES --- 
+219:        <button id="nav-to-main" class="edge-nav-btn edge-nav-left" style="display: none;">
+ 
+--- CLOSING STYLE TAGS --- 
+212:    </style>
+ 
+================================================== 
