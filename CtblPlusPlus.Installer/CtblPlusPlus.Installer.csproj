@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\assets\CTBL.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3800.47" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CtblPlusPlus.Core\CtblPlusPlus.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Payload.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Cold Turkey setup shipped beside the installer exe. LaunchColdTurkeyInstaller()
+         reads it from the app's own directory, so <Link> forces it to land flat in the
+         output (not under an assets\ subfolder), and PreserveNewest re-copies it on every
+         build so a clean/rebuild can't strip it. -->
+    <None Include="..\assets\ColdTurkey_Installer.exe">
+      <Link>ColdTurkey_Installer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
