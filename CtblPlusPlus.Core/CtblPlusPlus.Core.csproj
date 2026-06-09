@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>CtblPlusPlus.Core</AssemblyName>
+    <Nullable>enable</Nullable>
+    <NoWarn>CS8600;CS8604;CS8618;CS8625</NoWarn>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Class library (no OutputType): the entry point was the deleted UI Program.cs.
+         UseWPF/UseWindowsForms are kept NOT for any UI (the dashboard is gone) but because they
+         pull in Microsoft.WindowsDesktop.App, the shared framework that supplies the Windows-only
+         runtime APIs Core actually uses: DPAPI (ProtectedData), ACLs/Windows identity, EventLog,
+         the registry, and Windows services. AspNetCore.App supplies Microsoft.Extensions.Hosting. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.3" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
