@@ -30,7 +30,7 @@ For the full list of planned and shipped improvements, see [`FEATURES.md`](FEATU
 
 ## Who this is for
 
-People who feel like Cold Turkey's current options aren't quite enough. If you've ever wished you could **add friction to your own unblocking**, set **stricter rules** than the app currently allows, or just want **more control** over how your blocks behave — this is that project.
+People who feel like Cold Turkey's current options aren't quite enough. If you've ever wished you could set **stricter rules** than the app currently allows, or just want **more control** over how your blocks behave — this is that project.
 
 ---
 
