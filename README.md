@@ -7,7 +7,7 @@ Cold Turkey is one of the best blocking tools out there, but there are features 
 
 ---
 
-## Features
+## MVP Features
 
 <table>
 <tr>
@@ -23,6 +23,8 @@ Cold Turkey is one of the best blocking tools out there, but there are features 
   <td>A local AI feature that automatically categorizes sites, searches, and apps against your stated goals and adds them to the right blocklist without you having to manage it manually.</td>
 </tr>
 </table>
+
+For the full list of planned and shipped improvements, see [`FEATURES.md`](FEATURES.md).
 
 ---
 
