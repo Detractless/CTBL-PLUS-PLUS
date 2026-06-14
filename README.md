@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > CTBL++ **requires the paid version of Cold Turkey Blocker.** It is not a crack, bypass, or a way to get paid features for free; it runs *alongside* Cold Turkey and extends it. CTBL++ is an independent community project and is **not affiliated with or endorsed by** the Cold Turkey developer.
 
-Cold Turkey is one of the best blocking tools out there, but there are features the developer has said they don't plan to build. CTBL++ fills that gap. It runs alongside Cold Turkey and extends it with new lock types, enforcement mechanics, and features the community actually wants.
+Cold Turkey is one of the best blocking tools out there, but there are features the developer has said they don't plan to build. CTBL++ fills that gap. It runs alongside Cold Turkey and extends it with new lock types, enforcement mechanics, and features the community wants.
 
 ---
 
