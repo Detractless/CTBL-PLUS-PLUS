@@ -1,9 +1,9 @@
 <p align="center"> <img src="assets/banner.svg" alt="CTBL++ — Cold Turkey Blocker, extended" width="100%"> </p> <p align="center"> <b>A community-built add-on for <a href="https://getcoldturkey.com/">Cold Turkey Blocker</a> that adds the features the official app doesn't have.</b> </p> <p align="center"> <img src="https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Platform: Windows"> <img src="https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET 10"> <img src="https://img.shields.io/github/languages/top/Detractless/CtblPlusPlus?style=for-the-badge&logo=csharp&logoColor=white&color=239120" alt="Top language"> <img src="https://img.shields.io/badge/status-alpha-F59E0B?style=for-the-badge" alt="Status: alpha"> <img src="https://img.shields.io/badge/requires-Cold%20Turkey%20Pro-DC2626?style=for-the-badge" alt="Requires Cold Turkey Pro"> <img src="https://img.shields.io/badge/license-MIT-22C55E?style=for-the-badge" alt="License: MIT"> <img src="https://img.shields.io/github/stars/Detractless/CtblPlusPlus?style=for-the-badge&color=eac54f" alt="Stars"> </p>
 
 > [!IMPORTANT]
-> CTBL++ **requires the paid version of Cold Turkey Blocker.** It is not a crack, bypass, or a way to get paid features for free — it runs *alongside* Cold Turkey and extends it. CTBL++ is an independent community project and is **not affiliated with or endorsed by** the Cold Turkey developer.
+> CTBL++ **requires the paid version of Cold Turkey Blocker.** It is not a crack, bypass, or a way to get paid features for free; it runs *alongside* Cold Turkey and extends it. CTBL++ is an independent community project and is **not affiliated with or endorsed by** the Cold Turkey developer.
 
-Cold Turkey is one of the best blocking tools out there — but there are features the developer has said they don't plan to build. CTBL++ fills that gap. It runs alongside Cold Turkey and extends it with new lock types, enforcement mechanics, and features the community actually wants.
+Cold Turkey is one of the best blocking tools out there, but there are features the developer has said they don't plan to build. CTBL++ fills that gap. It runs alongside Cold Turkey and extends it with new lock types, enforcement mechanics, and features the community actually wants.
 
 ---
 
@@ -16,11 +16,11 @@ Cold Turkey is one of the best blocking tools out there — but there are featur
 </tr>
 <tr>
   <td><b>Tamper resistance</b><br><sub><code>shipped</code></sub></td>
-  <td>A background Engine service backed by two cross-monitoring watchdogs (Wd1 / Wd2). They watch the Engine and each other, restart on death, and mark themselves critical — so the enforcement layer is hard to simply kill.</td>
+  <td>A background Engine service backed by two cross-monitoring watchdogs (Wd1 / Wd2). They watch the Engine and each other, restart on death, and mark themselves critical, making the enforcement layer hard to simply kill.</td>
 </tr>
 <tr>
   <td><b>Local AI categorization</b><br><sub><code>planned</code></sub></td>
-  <td>A local AI feature that automatically categorizes sites, searches, and apps against your stated goals — and adds them to the right blocklist without you having to manage it manually.</td>
+  <td>A local AI feature that automatically categorizes sites, searches, and apps against your stated goals and adds them to the right blocklist without you having to manage it manually.</td>
 </tr>
 </table>
 
@@ -39,14 +39,14 @@ People who feel like Cold Turkey's current options aren't quite enough. If you'v
 ### Prerequisites
 
 - **Windows** (the solution targets `net10.0-windows`)
-- **Cold Turkey Blocker — paid version**, installed at its default location (`C:\Program Files\Cold Turkey`)
+- **Cold Turkey Blocker (paid version)**, installed at its default location (`C:\Program Files\Cold Turkey`)
 - [**.NET 10 SDK**](https://dotnet.microsoft.com/download)
 - [**Node.js**](https://nodejs.org/) (used to build the patched web UI via webpack)
 - An **Administrator** terminal (CTBL++ installs Windows services and patches files under `Program Files`)
 
 ### Build
 
-The repo ships an interactive build menu — there is no `.sln`, so each project is built individually.
+The repo ships an interactive build menu; there is no `.sln`, so each project is built individually.
 
 ```bat
 :: from the repo root, in an Administrator terminal
@@ -84,13 +84,13 @@ CTBL++ is a **multi-project .NET 10 (Windows)** solution. The UI is delivered by
 
 | Project | Type | Role |
 |---|---|---|
-| **CtblPlusPlus.Core** | Class library (headless) | Shared core — queue, persistence, security, lockdown, system & app control. Referenced by every other project. |
+| **CtblPlusPlus.Core** | Class library (headless) | Shared core: queue, persistence, security, lockdown, system & app control. Referenced by every other project. |
 | **CtblPlusPlus.Engine** | Windows Service | The only process that does real work. Hosts the repositories, queue dispatcher, enforcer/lockdown battery, and the local REST API on `http://127.0.0.1:58123`. |
 | **CtblPlusPlus.Wd1 / Wd2** | Windows Services | Watchdogs. Monitor the Engine and each other, restart on death, mark self critical. |
 | **CtblPlusPlus.Installer** | WPF + WebView2 | The setup wizard. Embeds the published payload and ships the Cold Turkey installer. |
 
 ```
-CtblPlusPlus.Core            (lowest layer — references no other project)
+CtblPlusPlus.Core            (lowest layer, references no other project)
    ▲           ▲        ▲           ▲
    │           │        │           │
  Engine       Wd1      Wd2      Installer     (each references Core only)
@@ -117,17 +117,17 @@ The core architecture is in place. The project is currently transitioning **away
 
 ## Get involved
 
-CTBL++ is in active development and **looking for collaborators** — coders, vibe coders, and people with ideas are all welcome. Even if you can't write code, **feature requests and feedback are genuinely useful.**
+CTBL++ is in active development and **looking for collaborators**: coders, vibe coders, and people with ideas are all welcome. Even if you can't write code, **feature requests and feedback are genuinely useful.**
 
-- [Open an issue](https://github.com/Detractless/CtblPlusPlus/issues) — bugs, ideas, feature requests
-- [Start a discussion](https://github.com/Detractless/CtblPlusPlus/discussions) — questions and design talk
+- [Open an issue](https://github.com/Detractless/CtblPlusPlus/issues): bugs, ideas, feature requests
+- [Start a discussion](https://github.com/Detractless/CtblPlusPlus/discussions): questions and design talk
 - Fork, build (see [Getting started](#getting-started)), and open a pull request
 
 ---
 
 ## License
 
-Released under the [MIT License](LICENSE) — free to use, modify, and distribute with attribution.
+Released under the [MIT License](LICENSE). Free to use, modify, and distribute with attribution.
 
 ---
 
