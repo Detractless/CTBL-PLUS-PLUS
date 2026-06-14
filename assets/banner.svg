@@ -1,0 +1,17 @@
+<svg width="1200" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CtblPlusPlus — Cold Turkey Blocker, extended">
+  <!-- ANSI Shadow wordmark, row-by-row vertical green gradient (matches ctbl_banner.py) -->
+  <text x="600" y="21" xml:space="preserve" text-anchor="middle" font-family="'Cascadia Code','Cascadia Mono',Consolas,'DejaVu Sans Mono','Liberation Mono',monospace" font-size="21" font-weight="700" letter-spacing="-0.5">
+    <tspan x="600" dy="0"  fill="#a3e635"> ██████╗████████╗██████╗ ██╗     ██████╗ ██╗     ██╗   ██╗███████╗██████╗ ██╗     ██╗   ██╗███████╗</tspan>
+    <tspan x="600" dy="21" fill="#8acb25">██╔════╝╚══██╔══╝██╔══██╗██║     ██╔══██╗██║     ██║   ██║██╔════╝██╔══██╗██║     ██║   ██║██╔════╝</tspan>
+    <tspan x="600" dy="21" fill="#71b015">██║        ██║   ██████╔╝██║     ██████╔╝██║     ██║   ██║███████╗██████╔╝██║     ██║   ██║███████╗</tspan>
+    <tspan x="600" dy="21" fill="#5d960e">██║        ██║   ██╔══██╗██║     ██╔═══╝ ██║     ██║   ██║╚════██║██╔═══╝ ██║     ██║   ██║╚════██║</tspan>
+    <tspan x="600" dy="21" fill="#4e7c10">╚██████╗   ██║   ██████╔╝███████╗██║     ███████╗╚██████╔╝███████║██║     ███████╗╚██████╔╝███████║</tspan>
+    <tspan x="600" dy="21" fill="#3f6212"> ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚══════╝</tspan>
+  </text>
+
+  <!-- tagline -->
+  <text x="600" y="155" text-anchor="middle" font-family="'Cascadia Code','Cascadia Mono',Consolas,'DejaVu Sans Mono',monospace" font-size="18">
+    <tspan fill="#65a30d" font-weight="700">› </tspan><tspan fill="#c9d1d9">Cold Turkey Blocker, extended.</tspan>
+  </text>
+  <text x="600" y="185" text-anchor="middle" font-family="'Cascadia Code','Cascadia Mono',Consolas,'DejaVu Sans Mono',monospace" font-size="14" fill="#3f6212">.NET 10 · Windows · MIT licensed</text>
+</svg>
